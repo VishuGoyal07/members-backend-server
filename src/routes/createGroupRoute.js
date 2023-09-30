@@ -6,7 +6,7 @@ export const createGroupRoute={
     path:'/groups',
     handler:async(req,res)=>{
         const token=req.headers.authtoken;
-        const name=req.body;
+        const {name}=req.body;
 
         
         const user=await admin.auth().verifyIdToken(token);
